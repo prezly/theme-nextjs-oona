@@ -25,7 +25,6 @@ import { Header } from '@/modules/Header';
 import { IntlProvider } from '@/modules/Intl';
 import { Notifications } from '@/modules/Notifications';
 import { RoutingProvider } from '@/modules/Routing';
-import { SubscribeForm } from '@/modules/SubscribeForm';
 
 import '@prezly/content-renderer-react-js/styles.css';
 import '@prezly/uploadcare-image/build/styles.css';
@@ -106,7 +105,6 @@ export default async function MainLayout(props: Props) {
                     <div className={styles.layout}>
                         <Header localeCode={localeCode} />
                         <main className={styles.content}>{children}</main>
-                        <SubscribeForm />
                         <Boilerplate localeCode={localeCode} />
                         <Footer localeCode={localeCode} />
                     </div>

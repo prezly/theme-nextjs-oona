@@ -25,7 +25,7 @@ export function Footer({ children, ...props }: Props) {
     return (
         <footer className={styles.container}>
             <div className="container">
-                <div className={styles.footer}>
+                <div className={styles.footerLinks}>
                     <div className={styles.links}>{children}</div>
                     {!isWhiteLabeled && <MadeWithPrezly />}
                 </div>

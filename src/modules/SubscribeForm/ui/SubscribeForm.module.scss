@@ -3,7 +3,7 @@
 
     padding-top: $spacing-8;
     padding-bottom: $spacing-8;
-    background-color: var(--prezly-background-color-secondary);
+    background-color: #000000;
     text-align: center;
 
     @include desktop-up {
@@ -37,6 +37,15 @@
 .button {
     width: 100%;
     align-self: start;
+    background-color: #8beba2 !important;
+    border-color: #10ffef !important;
+    color: #ffffff !important;
+
+    &:hover {
+        background-color: #000000 !important;
+        border-color: #10ffef !important;
+        color: rgb(16, 255, 239) !important;
+    }
 }
 
 .input {
@@ -56,4 +65,9 @@
     @include link-primary;
 
     font-weight: $font-weight-medium;
+    color: #ffffff !important;
+
+    &:focus {
+        color: rgb(16, 255, 239) !important;
+    }
 }

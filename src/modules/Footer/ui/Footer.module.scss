@@ -3,7 +3,7 @@
 
     padding: $spacing-5 0;
     color: var(--prezly-footer-text-color);
-    background: var(--prezly-footer-background-color);
+    background: #000000;
     position: relative;
 
     &::before {
@@ -19,10 +19,10 @@
     }
 }
 
-.footer {
+.footerLinks {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     @include not-desktop {
         display: block;
@@ -32,6 +32,7 @@
 .links {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     @include not-desktop {
         &:not(:last-child) {
@@ -49,6 +50,10 @@
     cursor: pointer;
     color: var(--prezly-footer-text-color);
     text-decoration: underline;
+
+    &:focus {
+        color: rgb(16, 255, 239) !important;
+    }
 
     & + & {
         margin-left: $spacing-3;

@@ -4,6 +4,7 @@ import { translations } from '@prezly/theme-kit-nextjs';
 import { app, intl } from '@/adapters/server';
 
 import { CookieConsentLink } from '../CookieConsent';
+import { SubscribeForm } from '../SubscribeForm';
 
 import * as ui from './ui';
 
@@ -20,6 +21,7 @@ export async function Footer({ localeCode }: Props) {
 
     return (
         <ui.Footer isWhiteLabeled={newsroom.is_white_labeled}>
+            <SubscribeForm />
             <ui.DataRequestLink className={styles.link} newsroom={newsroom} localeCode={localeCode}>
                 {formatMessage(translations.actions.privacyRequests)}
             </ui.DataRequestLink>
