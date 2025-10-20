@@ -6,6 +6,7 @@ $header-height: 88px;
     min-height: $header-height;
     z-index: 3;
     position: relative;
+    padding-top: 20px;
 
     &::before {
         content: '';
@@ -24,7 +25,7 @@ $header-height: 88px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: $spacing-3 0;
+    padding: 2rem 0;
     height: 100%;
 
     .navigationToggle {
