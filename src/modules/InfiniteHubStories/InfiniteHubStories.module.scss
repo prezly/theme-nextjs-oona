@@ -1,6 +1,6 @@
 .newsrooms {
     display: grid;
-    gap: $spacing-4;
+    gap: 60px;
     grid-template-columns: repeat(2, 1fr);
 
     &.withMargin {
