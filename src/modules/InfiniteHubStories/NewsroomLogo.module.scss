@@ -12,6 +12,7 @@
     color: var(--prezly-text-color);
     border: 1px solid var(--prezly-border-color);
     overflow: hidden;
+    box-shadow: -7px 7px 0px 0px rgba(0, 0, 0, 1);
 
     &:hover img {
         transform: scale(1.05);
