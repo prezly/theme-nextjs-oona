@@ -4,6 +4,19 @@
     padding: $spacing-5 0;
     color: var(--prezly-footer-text-color);
     background: var(--prezly-footer-background-color);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 8px;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #BCD861 0%, #10FFEF 100%);
+        z-index: 1;
+    }
 }
 
 .footer {

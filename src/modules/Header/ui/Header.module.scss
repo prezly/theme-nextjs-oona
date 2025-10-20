@@ -5,6 +5,19 @@ $header-height: 88px;
     background: var(--prezly-header-background-color);
     min-height: $header-height;
     z-index: 3;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 8px;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #BCD861 0%, #10FFEF 100%);
+        z-index: 1;
+    }
 }
 
 .header {
