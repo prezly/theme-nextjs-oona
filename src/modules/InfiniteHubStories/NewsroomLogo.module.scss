@@ -1,13 +1,8 @@
 .newsroom {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     aspect-ratio: 1;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 140%;
-    text-align: center;
     text-decoration: none;
     color: var(--prezly-text-color);
     border: 1px solid var(--prezly-border-color);
@@ -15,11 +10,13 @@
     box-shadow: -7px 7px 0px 0px rgba(0, 0, 0, 1);
 
     &:hover img {
-        transform: scale(1.05);
+        filter: grayscale(100%);
     }
 
     &.withPadding {
-        padding: 2%;
+        .imageContainer {
+            padding: 0;
+        }
     }
 
     img {
@@ -28,6 +25,32 @@
         max-width: 100%;
         height: auto;
         max-height: 100%;
-        transition: transform 0.25s ease-in-out;
+        transition: filter 0.25s ease-in-out;
     }
+}
+
+.imageContainer {
+    flex: 0 0 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+    padding: 0;
+}
+
+.title {
+    flex: 0 0 25%;
+    margin: 0;
+    padding: 14px;
+    font-family: 'Helvetica Neue LT W05_77 Bd Cn', Helvetica, Arial;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 140%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }

@@ -34,11 +34,14 @@ export function NewsroomLogo({ newsroom }: Props) {
                     : undefined
             }
         >
-            {image ? (
-                <UploadcareImage alt={display_name} src={image.cdnUrl} width={373} height={373} />
-            ) : (
-                display_name
-            )}
+            <div className={styles.imageContainer}>
+                {image ? (
+                    <UploadcareImage alt={display_name} src={image.cdnUrl} width={373} height={373} />
+                ) : (
+                    display_name
+                )}
+            </div>
+            <h2 className={styles.title}>{display_name}</h2>
         </a>
     );
 }
