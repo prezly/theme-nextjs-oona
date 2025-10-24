@@ -14,6 +14,10 @@ export function NewsroomLogo({ newsroom }: Props) {
     const { active_theme_preset, display_name, newsroom_logo, square_logo, url } = newsroom;
     const image = getUploadcareImage(square_logo) ?? getUploadcareImage(newsroom_logo);
 
+    // Custom image for beauty-oona-agency newsroom
+    const isBeautyNewsroom = url.includes('beauty-oona-agency.prezly.com');
+    const customBeautyImageUrl = 'https://cdn.uc.assets.prezly.com/f43f642c-7a44-4139-a0bd-d95dd388ff26/-/preview/600x600/-/format/auto/';
+
     const isSquareLogo = square_logo !== null;
     const isMainLogo = !isSquareLogo && newsroom_logo !== null;
 
@@ -35,7 +39,9 @@ export function NewsroomLogo({ newsroom }: Props) {
             }
         >
             <div className={styles.imageContainer}>
-                {image ? (
+                {isBeautyNewsroom ? (
+                    <img src={customBeautyImageUrl} alt={display_name} width={373} height={373} />
+                ) : image ? (
                     <UploadcareImage alt={display_name} src={image.cdnUrl} width={373} height={373} />
                 ) : (
                     display_name
